@@ -1,0 +1,16 @@
+artifact_root: ${HOME}/mobilesam_distill_local
+data_root: ${HOME}/mobilesam_distill_local/data
+feature_root: ${HOME}/mobilesam_distill_local/features
+checkpoint_root: ${HOME}/mobilesam_distill_local/checkpoints
+output_root: ${HOME}/mobilesam_distill_local/outputs
+cache_root: ${HOME}/mobilesam_distill_local/cache
+
+coco10:
+  output_root: ${HOME}/mobilesam_distill_local/data/coco10
+  num_images: 10
+  seed: 1234
+
+validation:
+  output_root: ${HOME}/mobilesam_distill_local/data/coco_val5
+  num_images: 5
+  seed: 1234

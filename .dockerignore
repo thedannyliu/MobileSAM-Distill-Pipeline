@@ -1,0 +1,14 @@
+.git
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+MobileSAM/
+benchmark_outputs/
+logs/
+output/
+checkpoints/
+*.npy
+*.out

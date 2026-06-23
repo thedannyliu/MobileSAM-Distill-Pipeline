@@ -1,0 +1,29 @@
+artifact_root: /artifacts
+data_root: /artifacts/data
+feature_root: /artifacts/features
+checkpoint_root: /artifacts/checkpoints
+output_root: /artifacts/outputs
+cache_root: /artifacts/cache
+
+coco10:
+  output_root: /artifacts/data/coco10
+  num_images: 10
+  seed: 1234
+
+validation:
+  output_root: /artifacts/data/coco_val5
+  num_images: 5
+  seed: 1234
+
+teacher:
+  sam_type: vit_h
+  sam_ckpt: /artifacts/checkpoints/sam_vit_h_4b8939.pth
+
+training:
+  student_arch: tinyvit
+  train_dirs: images/train
+  val_dirs: images/val
+  epochs: 1
+  batch_size: 1
+  max_train_samples: 2
+  eval_nums: 5

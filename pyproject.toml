@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mobilesam-distill"
+version = "0.1.0"
+description = "Portable MobileSAM distillation, aggregation, and evaluation utilities"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "opencv-python-headless>=4.8",
+  "Pillow>=10.0",
+  "torch>=2.1",
+  "torchvision>=0.16",
+  "tqdm>=4.65",
+  "tensorboardX>=2.6",
+  "timm>=1.0.17",
+  "pycocotools>=2.0.7",
+  "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+mobilesam-export-teacher = "mobilesam_distill.teacher.export:main"
+mobilesam-train = "mobilesam_distill.training.distill:main"
+mobilesam-aggregate = "mobilesam_distill.models.aggregate:main"
+mobilesam-benchmark-coco = "mobilesam_distill.evaluation.coco_benchmark:main"
+mobilesam-prepare-coco10 = "mobilesam_distill.data.coco10:main"
+mobilesam-smoke-import = "mobilesam_distill.cli.smoke_import:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120

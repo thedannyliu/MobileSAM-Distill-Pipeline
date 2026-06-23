@@ -1,0 +1,10 @@
+numpy>=1.24
+opencv-python-headless>=4.8
+Pillow>=10.0
+torch>=2.1
+torchvision>=0.16
+tqdm>=4.65
+tensorboardX>=2.6
+timm>=1.0.17
+pycocotools>=2.0.7
+matplotlib>=3.7

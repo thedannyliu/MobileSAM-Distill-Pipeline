@@ -1,0 +1,4 @@
+-r train.txt
+-r eval.txt
+pytest>=8.0
+ruff>=0.5
