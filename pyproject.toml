@@ -29,6 +29,8 @@ mobilesam-export-teacher = "mobilesam_distill.teacher.export:main"
 mobilesam-train = "mobilesam_distill.training.distill:main"
 mobilesam-aggregate = "mobilesam_distill.models.aggregate:main"
 mobilesam-benchmark-coco = "mobilesam_distill.evaluation.coco_benchmark:main"
+mobilesam-prepare-coco = "mobilesam_distill.data.coco10:main"
+# Compatibility alias for existing environments.
 mobilesam-prepare-coco10 = "mobilesam_distill.data.coco10:main"
 mobilesam-smoke-import = "mobilesam_distill.cli.smoke_import:main"
 
