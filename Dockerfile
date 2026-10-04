@@ -25,10 +25,6 @@ RUN git clone "${MOBILE_SAM_REPO}" "${MOBILE_SAM_ROOT}" \
   && pip install -e .
 
 WORKDIR /repo
-COPY requirements /repo/requirements
-COPY requirements.txt pyproject.toml README.md /repo/
-RUN pip install -r requirements/train.txt
-
 COPY . /repo
 RUN pip install -e .
 
